@@ -8,7 +8,7 @@ const projects = [
     title: "My portfolio website",
     image: misa,
     description: "Tech Stack: React/JavaScript/HTML/CSS/Vite",
-    github: "https://github.com/xxx",
+    github: "https://github.com/misadev19/misa-portfolio",
   },
 ];
 

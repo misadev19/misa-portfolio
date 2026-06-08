@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import misa from "../assets/images/misa.jpg";
 
@@ -14,6 +14,18 @@ const projects = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
 
   return (
     <section id="projects" className="projects">
@@ -55,9 +67,13 @@ export default function Projects() {
 
             <p>{selectedProject.description}</p>
 
-            <a href={selectedProject.github} target="_blank" className="btn">
-              View Github
-              <FaGithub />
+            <a
+              href={selectedProject.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              View GitHub <FaGithub />
             </a>
           </div>
         </div>

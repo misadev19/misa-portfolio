@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import misa from "../assets/images/misa.jpg";
 
 const projects = [
@@ -9,6 +10,7 @@ const projects = [
     image: misa,
     description: "Tech Stack: React/JavaScript/HTML/CSS/Vite",
     github: "https://github.com/misadev19/misa-portfolio",
+    url: "https://misa-dev.vercel.app/",
   },
 ];
 
@@ -66,15 +68,25 @@ export default function Projects() {
             <h2>{selectedProject.title}</h2>
 
             <p>{selectedProject.description}</p>
+            <div className="modal-buttons">
+              <a
+                href={selectedProject.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                Live Demo <FiExternalLink />
+              </a>
 
-            <a
-              href={selectedProject.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              View GitHub <FaGithub />
-            </a>
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                View GitHub <FaGithub />
+              </a>
+            </div>
           </div>
         </div>
       )}

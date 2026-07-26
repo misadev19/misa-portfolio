@@ -11,6 +11,7 @@ A personal portfolio website built with React to showcase my projects, skills, a
 - Responsive design
 - Fixed navigation header
 - Smooth scrolling navigation
+- Japanese / English language switch
 - Project showcase section
 - Project detail modal
 - Contact section
@@ -47,6 +48,7 @@ https://misa-dev.vercel.app/
 - レスポンシブデザイン
 - 固定ヘッダー
 - スムーズスクロール
+- 日本語・英語切り替え
 - プロジェクト紹介
 - モーダルによる詳細表示
 - お問い合わせセクション

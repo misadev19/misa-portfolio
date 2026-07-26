@@ -464,6 +464,14 @@ html {
     width: 90vw;
   }
 
+  .hero p {
+    font-size: 17px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
   .contact p {
     text-align: left;
     max-width: 800px;

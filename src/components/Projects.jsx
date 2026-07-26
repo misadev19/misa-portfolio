@@ -2,19 +2,34 @@ import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import misa from "../assets/images/misa.jpg";
+import { translations } from "../i18n";
+import { useLanguage } from "../context/LanguageContext";
 
 const projects = [
   {
-    id: 1,
-    title: "My portfolio website",
+    id: "portfolio",
+    title: {
+      en: "Portfolio Website",
+      jp: "ポートフォリオサイト",
+    },
     image: misa,
-    description: "Tech Stack: React/JavaScript/HTML/CSS/Vite",
+    description: {
+      en: "A personal portfolio website built with React and Vite. \
+      Designed with a focus on clean UI, responsive layouts, and a smooth user experience.",
+
+      jp: "ReactとViteを使用して制作した個人ポートフォリオサイトです。\
+      シンプルで見やすいUIとレスポンシブ対応を意識して開発しました。",
+    },
+
+    techStack: "React / JavaScript / HTML / CSS / Vite",
     github: "https://github.com/misadev19/misa-portfolio",
     url: "https://misa-dev.vercel.app/",
   },
 ];
 
 export default function Projects() {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
@@ -39,13 +54,13 @@ export default function Projects() {
             className="project-card"
             onClick={() => setSelectedProject(project)}
           >
-            <img src={project.image} alt={project.title} />
+            <img src={project.image} alt={project.title[language]} />
 
             <div className="project-overlay">
-              <p>View Details</p>
+              <p>{t.projects.viewDetail}</p>
             </div>
 
-            <h3>{project.title}</h3>
+            <h3>{project.title[language]}</h3>
           </div>
         ))}
       </div>
@@ -56,8 +71,9 @@ export default function Projects() {
             <button
               className="close-btn"
               onClick={() => setSelectedProject(null)}
+              aria-label="Close"
             >
-              Close
+              ✕
             </button>
 
             <img
@@ -65,15 +81,20 @@ export default function Projects() {
               alt={selectedProject.title}
               className="modal-image"
             />
-            <h2>{selectedProject.title}</h2>
+            <h2>{selectedProject.title[language]}</h2>
 
-            <p>{selectedProject.description}</p>
-            <div className="modal-buttons">
+            <p className="modal-description">
+              {selectedProject.description[language]}
+            </p>
+            <p className="tech-stack">
+              {t.projects.techStack}
+              {selectedProject.techStack}
+            </p>
+            <div className="modal-links">
               <a
                 href={selectedProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn"
               >
                 Live Demo <FiExternalLink />
               </a>
@@ -82,9 +103,8 @@ export default function Projects() {
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn"
               >
-                View GitHub <FaGithub />
+                GitHub <FaGithub />
               </a>
             </div>
           </div>

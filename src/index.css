@@ -47,19 +47,23 @@ html {
   border: none;
   background: none;
 
-  font-family: "Bodoni Moda", serif;
-  font-size: 15px;
-  letter-spacing: 2px;
-
   cursor: pointer;
 
-  color: #555;
+  color: black;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 24px;
+  line-height: 1;
 
   transition: 0.3s;
 }
 
 .close-btn:hover {
-  color: black;
+  opacity: 0.6;
+}
+
+.close-btn:active {
+  transform: translateY(4px);
 }
 
 /* Header */
@@ -85,9 +89,11 @@ html {
   box-sizing: border-box;
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
+.header-logo-image {
+  height: 30px;
+  width: auto;
+
+  display: block;
 }
 
 .header-name {
@@ -120,6 +126,47 @@ html {
   transform: translateY(4px);
 }
 
+/* 言語切り替え */
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-left: 10px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 15px;
+}
+
+.language-switch button {
+  border: none;
+  background: none;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 15px;
+
+  color: #777;
+
+  transition: 0.3s;
+}
+
+.language-switch button:hover {
+  color: black;
+}
+
+.language-switch .active {
+  color: black;
+  font-weight: bold;
+}
+
+.language-switch span {
+  color: #aaa;
+}
+
 /* Hero */
 .hero {
   min-height: 100dvh;
@@ -131,14 +178,18 @@ html {
 }
 
 .hero-logo {
-  font-family: "Bodoni Moda", serif;
-  font-size: clamp(4rem, 15vw, 10rem);
-  line-height: 0.9;
+  width: min(700px, 80vw);
+  height: auto;
+
+  user-select: none;
+  pointer-events: none;
 }
 
 .hero p {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 19px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* About */
@@ -147,6 +198,10 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 100px 20px;
+}
+
+.about h1 {
+  margin-bottom: 40px;
 }
 
 .about-content {
@@ -163,15 +218,11 @@ html {
   color: #333;
 }
 
-.about-divider {
-  margin: 60px 0;
-  border: none;
-  border-top: 1px solid #ddd;
-}
-
 .about img {
   width: 200px;
   height: auto;
+
+  margin-bottom: 50px;
 }
 
 /* Projects */
@@ -215,9 +266,9 @@ html {
 }
 
 .project-card h3 {
-  font-family: "Bodoni Moda", serif;
   margin-top: 15px;
   font-weight: 500;
+  font-family: "Bodoni Moda", serif;
 }
 
 .project-overlay {
@@ -271,29 +322,68 @@ html {
 
   background: white;
 
-  padding: 50px;
+  padding: 60px 50px;
 
   border-radius: 20px;
 
   text-align: center;
 }
 
-.modal-buttons {
+.tech-stack {
+  text-align: left;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+
+  color: #777;
+
+  margin-bottom: 35px;
+}
+
+.modal-links {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.modal-links a {
+  color: black;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 16px;
+
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border-bottom: 1px solid transparent;
+
+  transition: 0.3s;
+}
+
+.modal-links a:hover {
+  border-bottom: 1px solid black;
 }
 
 .modal-content h2 {
-  margin-bottom: 20px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Bodoni Moda", serif;
 }
 
-.modal-content p {
-  margin-bottom: 40px;
-  line-height: 1.8;
+.modal-description {
+  text-align: left;
+
   font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+
+  color: #333;
+
+  margin-bottom: 25px;
 }
 
 .modal-image {
@@ -326,6 +416,7 @@ html {
 .contact .btn {
   margin-top: 40px;
   margin-bottom: 80px;
+  font-family: "Bodoni Moda", serif;
 }
 
 .email-address {
@@ -371,9 +462,8 @@ html {
     min-height: 80vh;
   }
 
-  .modal-buttons {
-    flex-direction: column;
-    align-items: center;
+  .hero-logo {
+    width: 90vw;
   }
 
   .contact p {

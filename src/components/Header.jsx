@@ -1,5 +1,4 @@
 import { useLanguage } from "../context/LanguageContext";
-import headerLogo from "../assets/images/misa-header.png";
 
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
@@ -7,7 +6,7 @@ export default function Header() {
   return (
     <header className="header">
       <a href="#" className="header-name">
-        <img src={headerLogo} alt="Misa" className="header-logo-image" />
+        Misa
       </a>
 
       <nav className="nav">

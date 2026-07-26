@@ -89,11 +89,9 @@ html {
   box-sizing: border-box;
 }
 
-.header-logo-image {
-  height: 30px;
-  width: auto;
-
-  display: block;
+.header-logo {
+  display: flex;
+  align-items: center;
 }
 
 .header-name {

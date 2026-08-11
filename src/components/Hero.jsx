@@ -11,7 +11,9 @@ export default function Hero() {
     <section className="hero">
       <img src={logo} alt="Misa" className="hero-logo" />
       <p>
-        Frontend Engineer & Mobile App Developer <br />
+        Frontend Engineer &
+        <br className="mobile-break" /> App Developer
+        <br />
         based in Tokyo, Japan.
       </p>
       <a

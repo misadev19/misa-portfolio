@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import misa from "../assets/images/misa.jpg";
+import meno from "../assets/images/meno.png";
 import { translations } from "../i18n";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -14,16 +15,27 @@ const projects = [
     },
     image: misa,
     description: {
-      en: "A personal portfolio website built with React and Vite. \
-      Designed with a focus on clean UI, responsive layouts, and a smooth user experience.",
-
-      jp: "ReactとViteを使用して制作した個人ポートフォリオサイトです。\
-      シンプルで見やすいUIとレスポンシブ対応を意識して開発しました。",
+      en: "A personal portfolio website built with React and Vite. Designed with a focus on clean UI, responsive layouts, and a smooth user experience.",
+      jp: "ReactとViteを使用して制作した個人ポートフォリオサイトです。シンプルで見やすいUIとレスポンシブ対応を意識して開発しました。",
     },
-
     techStack: "React / JavaScript / HTML / CSS / Vite",
     github: "https://github.com/misadev19/misa-portfolio",
     url: "https://misa-dev.vercel.app/",
+  },
+  {
+    id: "meno",
+    title: {
+      en: "Meno",
+      jp: "Meno",
+    },
+    image: meno,
+    description: {
+      en: "An all-in-one productivity app that combines a calendar, to-do list, and notes in a simple and intuitive interface.",
+      jp: "カレンダー・Todo・メモをひとつにまとめた、シンプルで使いやすいオールインワンアプリです。",
+    },
+    techStack: "React Native / Expo / JavaScript / AsyncStorage / AdMob",
+
+    url: "https://apps.apple.com/us/app/meno-カレンダー-todo-メモ/id6802020654",
   },
 ];
 
@@ -47,6 +59,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <h1 className="logo">Projects</h1>
+
       <div className="project-grid">
         {projects.map((project) => (
           <div
@@ -78,34 +91,42 @@ export default function Projects() {
 
             <img
               src={selectedProject.image}
-              alt={selectedProject.title}
+              alt={selectedProject.title[language]}
               className="modal-image"
             />
+
             <h2>{selectedProject.title[language]}</h2>
 
             <p className="modal-description">
               {selectedProject.description[language]}
             </p>
+
             <p className="tech-stack">
               {t.projects.techStack}
               {selectedProject.techStack}
             </p>
-            <div className="modal-links">
-              <a
-                href={selectedProject.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Demo <FiExternalLink />
-              </a>
 
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub <FaGithub />
-              </a>
+            <div className="modal-links">
+              {selectedProject.url && (
+                <a
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {selectedProject.id === "meno" ? "App Store" : "Live Demo"}
+                  <FiExternalLink />
+                </a>
+              )}
+
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <FaGithub />
+                </a>
+              )}
             </div>
           </div>
         </div>

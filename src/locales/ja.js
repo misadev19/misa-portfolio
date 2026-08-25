@@ -6,15 +6,46 @@ export default {
   },
 
   about: {
-    paragraphs: [
-      "Reactを中心としたモダンなフロントエンド開発を学習しており、ユーザーにとって使いやすく、分かりやすいUIを作ることに興味があります。",
+    name: "Misa",
+    role: "Frontend Engineer / App Developer",
 
-      "これまで業務や個人開発を通してJavaScript、C#、Python、SQLに触れてきました。現在はReactを中心に学習を進めながら、ポートフォリオ制作やWebアプリケーション開発に取り組んでいます。",
+    intro:
+      "ReactとJavaScriptを中心に、シンプルで使いやすく、心地よいユーザー体験を意識したWebサイトやアプリケーションを制作しています。",
 
-      "カナダでのワーキングホリデー経験があり、日本語と英語の両方でコミュニケーションが可能です。",
+    whatIDo: {
+      title: "What I Do",
 
-      "現在はReactの知識を深め、機能性と優れたユーザー体験を両立したWebアプリケーション制作に取り組んでいます。",
-    ],
+      items: [
+        {
+          title: "Frontend Development",
+          description:
+            "Reactを中心に、デザインと機能性を両立したWebサイトやWebアプリケーションを制作しています。",
+          tech: "React · JavaScript · Vite",
+        },
+        {
+          title: "Mobile Development",
+          description:
+            "React NativeとExpoを使い、実際にユーザーが利用できるモバイルアプリケーションを開発しています。",
+          tech: "React Native · Expo",
+        },
+        {
+          title: "UI / UX",
+          description:
+            "複雑になりすぎない、直感的で使いやすいインターフェースを大切にしています。",
+          tech: "Simple · Intuitive · User-focused",
+        },
+      ],
+    },
+
+    approach: {
+      title: "My Approach",
+      text: "良いデジタル体験とは、シンプルで直感的であるべきだと考えています。機能を実装するだけでなく、デザインや操作性にもこだわり、実際に使う人にとって心地よいプロダクトを作ることを大切にしています。",
+    },
+
+    moreAboutMe: {
+      title: "A Little More About Me",
+      text: "カナダでワーキングホリデーを経験し、異なる文化や価値観に触れてきました。日本語と英語の両方でコミュニケーションが可能です。新しい技術やアイデアを楽しみながら、日々制作に取り組んでいます。",
+    },
   },
 
   projects: {

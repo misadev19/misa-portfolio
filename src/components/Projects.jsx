@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import misa from "../assets/images/misa.jpg";
 import meno from "../assets/images/meno.png";
+import crownAndAmber from "../assets/images/crown-and-amber.png";
 import { translations } from "../i18n";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -18,7 +19,7 @@ const projects = [
       en: "A personal portfolio website built with React and Vite. Designed with a focus on clean UI, responsive layouts, and a smooth user experience.",
       jp: "ReactとViteを使用して制作した個人ポートフォリオサイトです。シンプルで見やすいUIとレスポンシブ対応を意識して開発しました。",
     },
-    techStack: "React / JavaScript / HTML / CSS / Vite",
+    techStack: "React / JavaScript / HTML / CSS / Vite/ Vercel",
     github: "https://github.com/misadev19/misa-portfolio",
     url: "https://misa-dev.vercel.app/",
   },
@@ -36,6 +37,21 @@ const projects = [
     techStack: "React Native / Expo / JavaScript / AsyncStorage / AdMob",
 
     url: "https://apps.apple.com/us/app/meno-カレンダー-todo-メモ/id6802020654",
+  },
+  {
+    id: "crown-and-amber",
+    title: {
+      en: "CROWN & AMBER",
+      jp: "CROWN & AMBER",
+    },
+    image: crownAndAmber,
+    description: {
+      en: "A fictional tea brand e-commerce website built with React and Vite. Designed with a focus on elegant visual design, responsive layouts, and an immersive shopping experience.",
+      jp: "架空の紅茶ブランド「CROWN & AMBER」のECサイトを想定して制作したWebサイトです。エレガントなビジュアルデザインとレスポンシブ対応を意識し、ブランドの世界観を感じられるサイトを目指しました。",
+    },
+    techStack: "React / JavaScript / HTML / CSS / Vite / Vercel",
+    github: "https://github.com/misadev19/crown-and-amber",
+    url: "https://crown-and-amber.vercel.app/",
   },
 ];
 

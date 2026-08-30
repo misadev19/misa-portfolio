@@ -6,6 +6,7 @@ import meno from "../assets/images/meno.png";
 import crownAndAmber from "../assets/images/crown-and-amber.png";
 import { translations } from "../i18n";
 import { useLanguage } from "../context/LanguageContext";
+import milesiaAtollResort from "../assets/images/milesia-atoll-resort.png";
 
 const projects = [
   {
@@ -52,6 +53,21 @@ const projects = [
     techStack: "React / JavaScript / HTML / CSS / Vite / Vercel",
     github: "https://github.com/misadev19/crown-and-amber",
     url: "https://crown-and-amber.vercel.app/",
+  },
+  {
+    id: "milesia-atoll-resort",
+    title: {
+      en: "Milesia Atoll Resort",
+      jp: "Milesia Atoll Resort",
+    },
+    image: milesiaAtollResort,
+    description: {
+      en: "A fictional luxury resort landing page inspired by the Maldives. Built with HTML and CSS, featuring scroll-based animations and immersive visual transitions using GSAP.",
+      jp: "モルディブのラグジュアリーリゾートをイメージした架空のLPサイトです。HTMLとCSSをベースに、GSAPを使用したスクロールアニメーションや視覚的なトランジションを取り入れ、リゾートの世界観を表現しました。",
+    },
+    techStack: "HTML / CSS / JavaScript / GSAP / ScrollTrigger / Vercel",
+    github: "https://github.com/misadev19/milesia-atoll-resort",
+    url: "https://milesia-atoll-resort.vercel.app/",
   },
 ];
 

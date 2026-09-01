@@ -35,7 +35,7 @@ const projects = [
       en: "An all-in-one productivity app that combines a calendar, to-do list, and notes in a simple and intuitive interface.",
       jp: "カレンダー・Todo・メモをひとつにまとめた、シンプルで使いやすいオールインワンアプリです。",
     },
-    techStack: "React Native / Expo / JavaScript / AsyncStorage / AdMob",
+    techStack: "React Native / Expo / TypeScript / AsyncStorage / AdMob",
 
     url: "https://apps.apple.com/us/app/meno-カレンダー-todo-メモ/id6802020654",
   },
@@ -50,7 +50,7 @@ const projects = [
       en: "A fictional tea brand e-commerce website built with React and Vite. Designed with a focus on elegant visual design, responsive layouts, and an immersive shopping experience.",
       jp: "架空の紅茶ブランド「CROWN & AMBER」のECサイトを想定して制作したWebサイトです。エレガントなビジュアルデザインとレスポンシブ対応を意識し、ブランドの世界観を感じられるサイトを目指しました。",
     },
-    techStack: "React / JavaScript / HTML / CSS / Vite / Vercel",
+    techStack: "React / TypeScript / HTML / CSS / Vite / Vercel",
     github: "https://github.com/misadev19/crown-and-amber",
     url: "https://crown-and-amber.vercel.app/",
   },

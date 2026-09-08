@@ -7,6 +7,7 @@ import crownAndAmber from "../assets/images/crown-and-amber.png";
 import { translations } from "../i18n";
 import { useLanguage } from "../context/LanguageContext";
 import milesiaAtollResort from "../assets/images/milesia-atoll-resort.png";
+import voidbass from "../assets/images/voidbass.png";
 
 const projects = [
   {
@@ -69,6 +70,22 @@ const projects = [
     github: "https://github.com/misadev19/milesia-atoll-resort",
     url: "https://milesia-atoll-resort.vercel.app/",
   },
+  {
+    id: "voidbass",
+    title: {
+      en: "VOIDBASS",
+      jp: "VOIDBASS",
+    },
+    image: voidbass,
+    description: {
+      en: "A fictional audio brand e-commerce website built with React and Vite. Designed with a dark and immersive visual style, featuring smooth animations and interactive UI elements using GSAP.",
+      jp: "架空のオーディオブランド「VOIDBASS」のECサイトを想定して制作したWebサイトです。ダークで没入感のあるビジュアルデザインをベースに、GSAPによる滑らかなアニメーションやインタラクティブなUIを取り入れ、ブランドの世界観を表現しました。",
+    },
+    techStack:
+      "React / JavaScript / HTML / CSS / Vite / React Router / GSAP / ScrollTrigger / Vercel",
+    github: "https://github.com/misadev19/VOIDBASS",
+    url: "https://voidbass.vercel.app/",
+  },
 ];
 
 export default function Projects() {
@@ -99,10 +116,12 @@ export default function Projects() {
             className="project-card"
             onClick={() => setSelectedProject(project)}
           >
-            <img src={project.image} alt={project.title[language]} />
+            <div className="project-image">
+              <img src={project.image} alt={project.title[language]} />
 
-            <div className="project-overlay">
-              <p>{t.projects.viewDetail}</p>
+              <div className="project-overlay">
+                <p>{t.projects.viewDetail}</p>
+              </div>
             </div>
 
             <h3>{project.title[language]}</h3>
@@ -121,44 +140,46 @@ export default function Projects() {
               ✕
             </button>
 
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title[language]}
-              className="modal-image"
-            />
+            <div className="modal-scroll">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title[language]}
+                className="modal-image"
+              />
 
-            <h2>{selectedProject.title[language]}</h2>
+              <h2>{selectedProject.title[language]}</h2>
 
-            <p className="modal-description">
-              {selectedProject.description[language]}
-            </p>
+              <p className="modal-description">
+                {selectedProject.description[language]}
+              </p>
 
-            <p className="tech-stack">
-              {t.projects.techStack}
-              {selectedProject.techStack}
-            </p>
+              <p className="tech-stack">
+                {t.projects.techStack}
+                {selectedProject.techStack}
+              </p>
 
-            <div className="modal-links">
-              {selectedProject.url && (
-                <a
-                  href={selectedProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {selectedProject.id === "meno" ? "App Store" : "Live Demo"}
-                  <FiExternalLink />
-                </a>
-              )}
+              <div className="modal-links">
+                {selectedProject.url && (
+                  <a
+                    href={selectedProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {selectedProject.id === "meno" ? "App Store" : "Live Demo"}
+                    <FiExternalLink />
+                  </a>
+                )}
 
-              {selectedProject.github && (
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub <FaGithub />
-                </a>
-              )}
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub <FaGithub />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

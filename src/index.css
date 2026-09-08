@@ -124,7 +124,13 @@ html {
   transform: translateY(4px);
 }
 
-/* 言語切り替え */
+/* Mobile Menu */
+.menu-button,
+.mobile-menu {
+  display: none;
+}
+
+/* Language Switcher */
 .language-switch {
   display: flex;
   align-items: center;
@@ -521,19 +527,179 @@ html {
   text-decoration: underline;
 }
 
-/* スマホ用 */
+/* Mobile */
 @media (max-width: 768px) {
   .header {
-    padding: 12px 20px;
-  }
-
-  .nav {
-    gap: 15px;
-    font-size: 14px;
+    height: 64px;
+    padding: 0 20px;
   }
 
   .header-name {
-    font-size: 20px;
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  /* ========================================
+     Mobile Menu Button
+  ======================================== */
+
+  .menu-button {
+    position: relative;
+
+    width: 36px;
+    height: 36px;
+
+    margin-left: auto;
+
+    padding: 8px 4px;
+
+    border: none;
+    background: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    cursor: pointer;
+
+    z-index: 1100;
+  }
+
+  .menu-button span {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background: black;
+
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  /* Hamburger → X */
+
+  .menu-open .menu-button span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-open .menu-button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .menu-button span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* ========================================
+     Mobile Fullscreen Menu
+  ======================================== */
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+
+    z-index: 1050;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Navigation */
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+  }
+
+  .mobile-nav a {
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+
+    color: black;
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-nav a:hover {
+    opacity: 0.5;
+  }
+
+  /* Language */
+
+  .mobile-language {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 55px;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 14px;
+  }
+
+  .mobile-language button {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 14px;
+
+    color: #888;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+  }
+
+  .mobile-language button.active {
+    color: black;
+    font-weight: bold;
+  }
+
+  .mobile-language span {
+    color: #aaa;
+  }
+
+  /* ========================================
+     Other Mobile Styles
+  ======================================== */
+
+  .hero {
+    min-height: 80vh;
   }
 
   .hero {

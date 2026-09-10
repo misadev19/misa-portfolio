@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState("jp");
+  const [language, setLanguage] = useState("en");
 
   const changeLanguage = (lang) => {
     setLanguage(lang);

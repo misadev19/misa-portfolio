@@ -23,19 +23,17 @@ export default function Header() {
 
         <div className="language-switch">
           <button
-            className={language === "jp" ? "active" : ""}
-            onClick={() => changeLanguage("jp")}
-          >
-            JP
-          </button>
-
-          <span>/</span>
-
-          <button
             className={language === "en" ? "active" : ""}
             onClick={() => changeLanguage("en")}
           >
             EN
+          </button>
+          <span>/</span>
+          <button
+            className={language === "jp" ? "active" : ""}
+            onClick={() => changeLanguage("jp")}
+          >
+            JP
           </button>
         </div>
       </nav>
@@ -69,19 +67,17 @@ export default function Header() {
 
         <div className="mobile-language">
           <button
-            className={language === "jp" ? "active" : ""}
-            onClick={() => changeLanguage("jp")}
-          >
-            JP
-          </button>
-
-          <span>/</span>
-
-          <button
             className={language === "en" ? "active" : ""}
             onClick={() => changeLanguage("en")}
           >
             EN
+          </button>
+          <span>/</span>
+          <button
+            className={language === "jp" ? "active" : ""}
+            onClick={() => changeLanguage("jp")}
+          >
+            JP
           </button>
         </div>
       </div>

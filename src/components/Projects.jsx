@@ -21,7 +21,7 @@ const projects = [
       en: "A personal portfolio website built with React and Vite. Designed with a focus on clean UI, responsive layouts, and a smooth user experience.",
       jp: "ReactとViteを使用して制作した個人ポートフォリオサイトです。シンプルで見やすいUIとレスポンシブ対応を意識して開発しました。",
     },
-    techStack: "React / JavaScript / HTML / CSS / Vite/ Vercel",
+    techStack: "React / JavaScript / HTML / CSS / Vite / React Icons / Vercel",
     github: "https://github.com/misadev19/misa-portfolio",
     url: "https://misa-dev.vercel.app/",
   },
@@ -36,7 +36,8 @@ const projects = [
       en: "An all-in-one productivity app that combines a calendar, to-do list, and notes in a simple and intuitive interface.",
       jp: "カレンダー・Todo・メモをひとつにまとめた、シンプルで使いやすいオールインワンアプリです。",
     },
-    techStack: "React Native / Expo / TypeScript / AsyncStorage / AdMob",
+    techStack:
+      "React Native / Expo / TypeScript / Expo Router / AsyncStorage / AdMob",
 
     url: "https://apps.apple.com/us/app/meno-カレンダー-todo-メモ/id6802020654",
   },
@@ -51,7 +52,8 @@ const projects = [
       en: "A fictional tea brand e-commerce website built with React and Vite. Designed with a focus on elegant visual design, responsive layouts, and an immersive shopping experience.",
       jp: "架空の紅茶ブランド「CROWN & AMBER」のECサイトを想定して制作したWebサイトです。エレガントなビジュアルデザインとレスポンシブ対応を意識し、ブランドの世界観を感じられるサイトを目指しました。",
     },
-    techStack: "React / TypeScript / HTML / CSS / Vite / Vercel",
+    techStack:
+      "React / TypeScript / HTML / CSS / Vite / React Router / i18next / Vercel",
     github: "https://github.com/misadev19/crown-and-amber",
     url: "https://crown-and-amber.vercel.app/",
   },
@@ -82,7 +84,7 @@ const projects = [
       jp: "架空のオーディオブランド「VOIDBASS」のECサイトを想定して制作したWebサイトです。ダークで没入感のあるビジュアルデザインをベースに、GSAPによる滑らかなアニメーションやインタラクティブなUIを取り入れ、ブランドの世界観を表現しました。",
     },
     techStack:
-      "React / JavaScript / HTML / CSS / Vite / React Router / GSAP / ScrollTrigger / Vercel",
+      "React / JavaScript / HTML / CSS / Vite / GSAP / React Router / React Icons / Vercel",
     github: "https://github.com/misadev19/VOIDBASS",
     url: "https://voidbass.vercel.app/",
   },

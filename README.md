@@ -23,6 +23,7 @@ A personal portfolio website built with React to showcase my projects, skills, a
 - HTML
 - CSS
 - Vite
+- React Icons
 - Git
 - GitHub
 
@@ -60,6 +61,7 @@ https://misa-dev.vercel.app/
 - HTML
 - CSS
 - Vite
+- React Icons
 - Git
 - GitHub
 

@@ -2,6 +2,8 @@
 
 A personal portfolio website built with React to showcase my projects, skills, and contact information.
 
+[🇯🇵 日本語版はこちら](./README.ja.md)
+
 ## Live Demo
 
 [View Portfolio](https://misa-dev.vercel.app/)
@@ -28,44 +30,6 @@ A personal portfolio website built with React to showcase my projects, skills, a
 - GitHub
 
 ## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
----
-
-# ポートフォリオサイト
-
-Reactを使用して作成したポートフォリオサイトです。
-
-## Live Demo
-
-https://misa-dev.vercel.app/
-
-## 主な機能
-
-- レスポンシブデザイン
-- 固定ヘッダー
-- スムーズスクロール
-- 日本語・英語切り替え
-- プロジェクト紹介
-- モーダルによる詳細表示
-- お問い合わせセクション
-
-## 使用技術
-
-- React
-- JavaScript
-- HTML
-- CSS
-- Vite
-- React Icons
-- Git
-- GitHub
-
-## 起動方法
 
 ```bash
 npm install

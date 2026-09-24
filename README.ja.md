@@ -3,7 +3,7 @@
 Reactを使用して作成したポートフォリオサイトです。
 自身の制作物や連絡先を紹介しています。
 
-[🇬🇧 English version](./README.md)
+[English version](./README.md)
 
 ## Live Demo
 

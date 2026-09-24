@@ -2,7 +2,7 @@
 
 A personal portfolio website built with React to showcase my projects, skills, and contact information.
 
-[🇯🇵 日本語版はこちら](./README.ja.md)
+[日本語版はこちら](./README.ja.md)
 
 ## Live Demo
 

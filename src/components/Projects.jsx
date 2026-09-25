@@ -38,8 +38,10 @@ const projects = [
     },
     techStack:
       "React Native / Expo / TypeScript / Expo Router / AsyncStorage / AdMob",
-
-    url: "https://apps.apple.com/us/app/meno-カレンダー-todo-メモ/id6802020654",
+    appStore: {
+      jp: "https://apps.apple.com/jp/app/meno-カレンダー-todo-メモ/id6802020654",
+      en: "https://apps.apple.com/us/app/meno-calendar-to-do-notes/id6802020654",
+    },
   },
   {
     id: "crown-and-amber",
@@ -161,9 +163,13 @@ export default function Projects() {
               </p>
 
               <div className="modal-links">
-                {selectedProject.url && (
+                {(selectedProject.url || selectedProject.appStore) && (
                   <a
-                    href={selectedProject.url}
+                    href={
+                      selectedProject.id === "meno"
+                        ? selectedProject.appStore[language]
+                        : selectedProject.url
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                   >
